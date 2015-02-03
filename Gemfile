@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-ruby '2.0.0'
+#ruby '2.0.0'
 
 # Environment.  Locally, get stuff from ".env".  On Heroku, use heroku config:add NAME=VALUE.
 gem 'dotenv-rails', :groups => [:development, :test]
