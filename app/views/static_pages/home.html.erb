@@ -1,9 +1,7 @@
 <% provide(:title, 'Home') %>
 <div class="center hero-unit">
-	<h1>Helperby Fantasy Cricket</h1>
+	<h1>Marlabs Fantasy Cricket</h1>
 	<h2>
-  		This is the home page for the
-  		Helperby Fantasy Cricket application.
 	</h2>
     <% if !signed_in? %>
 	  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary", role: "button" %>
@@ -12,5 +10,5 @@
 	  <p>Use the links above to navigate through the site.</p>
 	<% end %>
 </div>
-<%= link_to image_tag("rails.png", alt: "Developed with Ruby on Rails"), 'http://rubyonrails.org/' %>
+<%#= link_to image_tag("rails.png", alt: "Developed with Ruby on Rails"), 'http://rubyonrails.org/' %>
 <!--%= image_tag("under-construction-s.jpg", :alt => "Under Construction") %-->
