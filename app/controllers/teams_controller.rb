@@ -57,7 +57,10 @@ end
         }
         format.json { render action: 'show', status: :created, location: @team }
       else
-        format.html { render user_path(current_user) }
+        format.html{ 
+          flash[:error] = "Team name is already taken.please try with another One" 
+          redirect_to user_path(current_user) 
+        }
         format.json { render json: @team.errors, status: :unprocessable_entity }
       end
     end
