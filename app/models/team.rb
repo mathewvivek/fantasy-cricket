@@ -25,10 +25,10 @@ class Team < ActiveRecord::Base
       self.errors.add(:players, "must include exactly #{PLAYERS_PER_TEAM} players")
       valid = false
     end
-    if self.players.where("age_category != 'Adult'").count < 2
-      self.errors.add(:players, "must include at least 2 junior players")
-      valid = false
-    end
+    #if self.players.where("age_category != 'Adult'").count < 2
+    #  self.errors.add(:players, "must include at least 2 junior players")
+    #  valid = false
+    #end
     return valid
   end
 
