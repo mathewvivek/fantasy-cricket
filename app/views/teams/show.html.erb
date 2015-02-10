@@ -19,7 +19,7 @@
   <%= @team.name %>
   <div class="btn-group">
   <% if correct_user_for_team?(@team) %>
-    <%= link_to "Edit Team", edit_team_path(@team), :class => "btn btn-default" %>
+    <%= link_to "Edit Team", edit_team_path(@team), :class => "btn btn-default" if authorize_for_edit? %>
     <%= link_to "Validate", validate_team_path(@team), :class => "btn btn-primary", method: :post  unless @team.validated %>
   <% end %>
   <%= link_to 'Player Scores', list_ps_team_path, class: "btn btn-default" %>
