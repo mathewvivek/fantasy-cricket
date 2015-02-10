@@ -27,18 +27,18 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
     @user.totalscore = 0
     @user.teamcash = INITIAL_TEAMCASH
-    token = Token.find_by(tokenstr: @user.tokenstr)
-    #binding.pry
-    unless token and token.user_id.nil?
-      flash[:warning] = "Sign-up token invalid. Please contact administrator"
-      render 'new'
-      return
-    end      
+    # token = Token.find_by(tokenstr: @user.tokenstr)
+    # #binding.pry
+    # unless token and token.user_id.nil?
+    #   flash[:warning] = "Sign-up token invalid. Please contact administrator"
+    #   render 'new'
+    #   return
+    # end      
 
 		if @user.save
 			sign_in @user
-      token.user_id = @user.id
-      token.save
+      #token.user_id = @user.id
+      #token.save
       #binding.pry
 			flash[:success] = "Welcome to Helperby Fantasy Cricket!"
 			redirect_to @user
