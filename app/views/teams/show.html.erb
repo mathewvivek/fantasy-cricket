@@ -8,7 +8,6 @@
         <%= @team.user.name %>
         <% if correct_user_for_team?(@team) %>
           <br/><small><%= @team.user.email %></small>
-          <br/><small class="teamcash">Team cash: <%= format_teamcash(@team.user.teamcash) %></small>
         <% end %>
       </h1>
     </section>
