@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: [:index, :new, :create, :edit, :update]
   skip_before_filter :verify_authenticity_token, :only => [:create]
   #before_save :add_children, :only => [:create]
   helper_method :sort_column, :sort_direction
