@@ -6,8 +6,8 @@ class Player < ActiveRecord::Base
   before_save :update_player_scores
   after_save :update_parent_team_scores
   validates :name, presence: true, uniqueness: true
-  validates :team, presence: true, inclusion: { :in => 1..TEAMS_IN_LEAGUE,
-  	message: "%{value} must be in range 1 to #{TEAMS_IN_LEAGUE}." }
+  #validates :team, presence: true, inclusion: { :in => 1..TEAMS_IN_LEAGUE,
+  #	message: "%{value} must be in range 1 to #{TEAMS_IN_LEAGUE}." }
   validates :age_category, inclusion: { in: AGE_CATEGORIES,
     message: "%{value} must be one of Junior or Adult." }
   validates :player_category, presence: true, inclusion: { in: PLAYER_CATEGORIES,
