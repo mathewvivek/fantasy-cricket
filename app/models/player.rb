@@ -2,6 +2,7 @@ class Player < ActiveRecord::Base
   has_and_belongs_to_many :teams
   has_many :player_scores
   belongs_to :innings
+  belongs_to :country
 
   before_save :update_player_scores
   after_save :update_parent_team_scores
