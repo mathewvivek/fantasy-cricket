@@ -152,7 +152,7 @@ input {
 
 /* Bootstrap sets text-align: left for td and th, so here's a way to overwrite it. */
 
-.table th.text-right, .table td.text-right { text-align: right; }
+.table th.text-right, .table td.text-right { text-align: left; }
 
 
 .timestamp {

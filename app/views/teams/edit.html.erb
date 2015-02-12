@@ -1,4 +1,4 @@
-<% if authorize_for_edit? || admin_user? %>
+<% if (authorize_for_edit? || admin_user?) %>
 	<% provide(:title, "Edit #{@team.name}") %>
 	<h1>Editing <%= @team.name %></h1>
 	<p>
