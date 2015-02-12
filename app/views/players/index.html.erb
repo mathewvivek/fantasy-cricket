@@ -13,7 +13,6 @@
   </aside>
 </div>
 
-
 <h1>Players</h1>
 <p>Click on a player's name to see more detailed statistics for that player.</p>
 <div class="new-player"></div>
@@ -40,7 +39,7 @@
     <tr>
     <% if @season == :thisseason %>
       <th><%= sortable "name", "Name", @season %></th>
-      <!--<th><%#= sortable "age_category", "Age", @season %></th>-->
+      <th><%= Country %></th>
       <th><%= sortable "player_category", "Type", @season %></th>
       <th class="text-right"><%= sortable "total", "Total", @season %></th>
       <th class="text-right"><%= sortable "bat_score", "Batting", @season %></th>
@@ -51,7 +50,7 @@
       <th><%= current_user.teams.first.name if current_user.teams.any? %></th>
     <% else %>
       <th><%= sortable "name", "Name", @season %></th>
-      <!--<th><%#= sortable "age_category", "Age", @season %></th>-->
+      <th><%= Country %></th>
       <th><%= sortable "player_category", "Type", @season %></th>
       <th class="text-right"><%= sortable "ls_total", "Total", @season %></th>
       <th class="text-right"><%= sortable "ls_bat_score", "Batting", @season %></th>

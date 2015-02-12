@@ -4,8 +4,8 @@
   </td>
   
 
-  <!--<td class="age_category"><%#= playertab.age_category %></td>-->
-  <td class="player_category"><%= playertab.player_category %></td>
+  <td class="age_category"><%= playertab.country.name %></td>
+  <td class="player_category"><%= playertab.player_category.titleize %></td>
   <% if season == :thisseason %>
     <td class="text-right"><%= playertab.total %></td>
     <td class="text-right"><%= playertab.bat_score %></td>
