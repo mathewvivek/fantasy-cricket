@@ -34,12 +34,12 @@
       <th colspan="2"/>
       <th colspan="4">Scores</th>
       <th colspan="2">Averages</th>
-      <th>Action for</th>
+      <th>Action for</th
     </tr>
     <tr>
     <% if @season == :thisseason %>
       <th><%= sortable "name", "Name", @season %></th>
-      <th><%= Country %></th>
+      <th><%= sortable "country_id", "Country", @season %></th>
       <th><%= sortable "player_category", "Type", @season %></th>
       <th class="text-right"><%= sortable "total", "Total", @season %></th>
       <th class="text-right"><%= sortable "bat_score", "Batting", @season %></th>
@@ -50,7 +50,7 @@
       <th><%= current_user.teams.first.name if current_user.teams.any? %></th>
     <% else %>
       <th><%= sortable "name", "Name", @season %></th>
-      <th><%= Country %></th>
+      <th><%= sortable "country_id", "Country", @season %></th>
       <th><%= sortable "player_category", "Type", @season %></th>
       <th class="text-right"><%= sortable "ls_total", "Total", @season %></th>
       <th class="text-right"><%= sortable "ls_bat_score", "Batting", @season %></th>

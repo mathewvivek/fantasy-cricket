@@ -4,8 +4,8 @@ class Player < ActiveRecord::Base
   belongs_to :innings
   belongs_to :country
 
-  # before_save :update_player_scores
-  # after_save :update_parent_team_scores
+   before_save :update_player_scores
+   after_save :update_parent_team_scores
   # validates :name, presence: true, uniqueness: true
   #validates :team, presence: true, inclusion: { :in => 1..TEAMS_IN_LEAGUE,
   #	message: "%{value} must be in range 1 to #{TEAMS_IN_LEAGUE}." }
