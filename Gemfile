@@ -14,8 +14,10 @@ gem 'rails', '4.0.0'
   #gem 'sqlite3', '1.3.8'
 #end
 # Use postgresql as the database for Active Record
+
 gem 'pg'
 
+gem 'heroku'
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.0'
